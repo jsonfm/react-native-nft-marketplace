@@ -1,8 +1,8 @@
-import { View, Image, Text } from 'react-native'
+import { View, Image, Text, TextInput } from 'react-native'
 import React from 'react'
 import { COLORS, FONTS, SIZES,  assets } from '../constants'
 
-export const HomeHeader = () => {
+export const HomeHeader = ({ onSearch }) => {
   return (
     <View style={{
         backgroundColor: COLORS,
@@ -66,6 +66,36 @@ export const HomeHeader = () => {
         }}>
             Let's find a master piece
         </Text>
+      </View>
+      <View style={{
+        marginTop: SIZES.font
+      }}>
+        <View style={{
+          width: "100%",
+          borderRadius: SIZES.font,
+          backgroundColor: COLORS.gray,
+          flexDirection: "row",
+          alignItems: "center",
+          paddingHorizontal: SIZES.font,
+          paddingVertical: SIZES.small - 2
+        }}>
+          <Image
+            source={assets?.search}
+            resizeMode="contain"
+            style={{
+              width: 20,
+              height: 20,
+              marginRight: SIZES.base
+            }}
+          />
+          <TextInput
+            placeholder="Search NFT"
+            style={{
+              flex: 1
+            }}
+            onChange={onSearch}
+          />
+        </View>
       </View>
     </View>
   )

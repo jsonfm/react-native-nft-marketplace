@@ -6,7 +6,6 @@ import { COLORS, NFTData } from "../constants";
 import { NFTCard } from "../components/NFTCard";
 import { HomeHeader } from "../components/HomeHeader";
 import { FocusedStatusBar } from "../components/FocusedStatusBar";
-import { CircleButton } from "../components/Button";
 
 const Home = () => {
   return (
